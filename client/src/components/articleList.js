@@ -8,7 +8,7 @@ const ArticleItem = (props) => {
         <Segment>
             <List.Item >
                 <Grid>
-                    <Grid.Column width={11}>
+                    <Grid.Column width={12}>
                         <Header as="h3">
                             <a href={article.url}>{article.title}</a>
                         </Header>
@@ -27,7 +27,7 @@ const ArticleItem = (props) => {
                             </List.Item>
                         </List>
                     </Grid.Column>
-                    <Grid.Column width={5}>
+                    <Grid.Column width={4}>
                         <Image src={article.urlToImage} size='medium' rounded/>
                     </Grid.Column>
                 </Grid>
@@ -38,7 +38,7 @@ const ArticleItem = (props) => {
 
 const ArticleList = (props) => {
     return (
-        <List divided style={{ maxWidth: 900, margin: "10 auto" }}>
+        <List divided style={{ margin: "10 auto" }}>
             {props.articles.map((article, index) => (
                 <ArticleItem article={article} key={article.title + index} />
             ))}
